@@ -1,0 +1,120 @@
+:root {
+  --color-brand--1: #ffb545;
+  --color-brand--2: #00c46a;
+  --color-dark--1: #2d3439;
+  --color-light--2: hsl(0, 0%, 93%);
+}
+
+body {
+  background-color: var(--color-light--2);
+}
+
+/* MAP */
+#map {
+  height: 100vh;
+  background-color: #aaa;
+  z-index: 2;
+}
+
+.search__contaienr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.form-container {
+  background-color: #2d3439;
+  /* text-align: center;
+  height: 50%;
+  width: 50%;
+  padding: 1%; */
+
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.form-heading {
+  font-size: 4rem;
+  margin: 2rem;
+  color: #fff;
+}
+.input__place {
+  padding: 1%;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+}
+.btn {
+  border-radius: 2rem;
+  margin: 2rem 2rem;
+  font-size: 1.3rem;
+  border: 1px solid #fff;
+  padding: 0.5rem 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.199);
+  backdrop-filter: blur(3px);
+  z-index: 3;
+}
+
+/*  leaflet css */
+
+/* Popup width is defined in JS using options */
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: var(--color-dark--1);
+  color: var(--color-light--2);
+  border-radius: 5px;
+  padding-right: 0.6rem;
+}
+
+.leaflet-popup .leaflet-popup-content {
+  font-size: 1.5rem;
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  background-color: var(--color-dark--1);
+}
+
+.task-popup .leaflet-popup-content-wrapper {
+  border-left: 5px solid var(--color-brand--2);
+}
+
+@media (max-width: 1200px) {
+  .form-heading {
+    font-size: 2rem;
+  }
+
+  .form-container {
+    background-color: #2d3439;
+    padding: 1%;
+    width: 80%;
+    padding: 3rem 2rem;
+  }
+
+  .btn {
+    border-radius: 2rem;
+    margin:2rem 0.2rem;
+  }
+}
